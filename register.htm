@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">  
+    <!-- Viewport set to scale 1.0 -->       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descriptive meta tags -->   
+    <meta name="description" content="ShopOnline registration">
+	<meta name="keywords" content="ShopOnline, bid, register">
+	<meta name="author" content="Levenspeil Sangalang">
+    <title>ShopOnline &#8211; Register</title>
+    <!-- References to external basic CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">  
+     <!-- References to external script file/s --> 
+    <script type="text/javascript" src="js/get-xhr.js"></script>
+    <!-- References to external fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;800&display=swap" rel="stylesheet"> 
+</head>
+<body>   
+    <header>
+        <h1 class="semibold blue">ShopOnline<h1>
+        <menu>  
+            <li><a href="listing.htm">Listing</a></li>
+            <li><a href="bidding.htm">Bidding</a></li>
+            <li><a href="maintenance.htm">Maintenance</a></li>
+            <li><a href="php/logout.php">Logout</a></li>
+        </menu>
+    </header>
+    <!-- Box container containing elements -->
+    <div class="form-cube">  
+        <br><h2 class="regular">Register</h2>
+        <br> 
+        <p class="validate-msg" id="msg"></p>
+        <div class="input-container"> 
+            <!-- Field for full name input starts -->
+            <div class="input-field"> 
+                <!-- HTML validation -->
+                <input type="text" name="firname" id="firname" maxlength="384" size="15" pattern="^[a-zA-Z ]+$" placeholder="First name*"> 
+            </div>  
+            <div class="input-field"> 
+                <!-- HTML validation -->
+                <input type="text" name="surname" id="surname" maxlength="384" size="15" pattern="^[a-zA-Z ]+$" placeholder="Surname*"> 
+            </div>  
+            <!-- Field for email starts -->
+            <div class="input-field">
+                <input type="text" name="email" id="email" maxlength="320" size="15" placeholder="Email*"> <!-- HTML validation -->
+            </div>  
+            <!-- Field for password starts -->
+            <div class="input-field">
+                <input type="text" name="password" id="password" maxlength="64" size="15" placeholder="Password*"> <!-- HTML validation -->
+            </div>
+            <div class="input-field">
+                <input type="text" name="password2" id="password2" maxlength="64" size="15" placeholder="Confirm password*"> <!-- HTML validation -->
+            </div>
+            <div id="float-left"> 
+                <p>Already registered? <a href="login.htm">Log in</a></p>
+            </div>
+            <!-- Register button -->  
+            <div id="float-right" class="fill">
+                <button id="fill-btn" onclick="registerGet();">Register</button>
+            </div>
+        </div> 
+    </div> 
+</body>
+</html>

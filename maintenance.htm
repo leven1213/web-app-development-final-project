@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"> 
+    <!-- Viewport set to scale 1.0 -->       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descriptive meta tags -->   
+    <meta name="description" content="ShopOnline maintenance">
+	<meta name="keywords" content="ShopOnline, maintenance, report">
+	<meta name="author" content="Levenspeil Sangalang">
+    <title>ShopOnline &#8211; Maintenance</title>
+    <!-- References to external basic CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">   
+    <!-- References to external fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;800&display=swap" rel="stylesheet"> 
+   
+</head>
+<body>    
+    <header>
+        <h1 class="semibold blue">ShopOnline<h1>
+        <menu>  
+            <li><a href="listing.htm">Listing</a></li>
+            <li><a href="bidding.htm">Bidding</a></li>
+            <li><a href="maintenance.htm" id="select">Maintenance</a></li>
+            <li><a href="php/logout.php">Logout</a></li>
+        </menu>
+    </header>
+    <div class="table-contain">
+        <br><h2 class="regular">Process Items</h2>
+        <p class="height">Choose a function to check or retrieve auction items, or generate revenue.
+        </p>
+        <form class="button-contain"> 
+            <input type="button" class="red-btn" id="processItem" onclick="processItem();" value="Process Items"/>
+            <input type="button" class="fill-btn" id="generateReport" onclick="genReport();" value="Generate Report"/>
+        </form>
+        <span id="showResults"></span>  
+        <p class="validate-msg" id="msg"></p>
+    </div>
+    <script type="text/javascript"> 
+        var xhr = false;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }  
+        document.getElementById("generateReport").onclick = genReport;
+        document.getElementById("processItem").onclick = processItem;
+        
+        function genReport() {
+            xhr.open("GET", "php/generate-xsl.php", true);
+            xhr.onreadystatechange = generateXSLT; 
+            xhr.send(null);
+        }
+
+        function generateXSLT() {
+            if (xhr.readyState == 4 && xhr.status == 200){
+                var generateResults = document.getElementById("showResults");
+                generateResults.innerHTML = xhr.responseText; 
+            } 
+        }
+
+        function processItem() {
+            xhr.open("GET", "php/process-xsl.php", true);
+            xhr.onreadystatechange = processXSLT; 
+            xhr.send(null);
+        }
+
+        function processXSLT() {
+            if (xhr.readyState == 4 && xhr.status == 200){
+                var processResults = document.getElementById("showResults");
+                processResults.innerHTML = xhr.responseText; 
+            } 
+        }
+    </script>
+</body>
+</html>

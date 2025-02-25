@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listedItems>
+  <listedItem>
+    <customerID>0</customerID>
+    <itemID>1</itemID>
+    <itemName>Samsung Galaxy S23</itemName>
+    <category>phone</category>
+    <description>128GB with charger. Unused</description>
+    <startPrice>200.00</startPrice>
+    <reservePrice>240.00</reservePrice>
+    <buyItNowPrice>310.00</buyItNowPrice>
+    <bidPrice>310.00</bidPrice>
+    <day>0</day>
+    <hour>0</hour>
+    <minute>5</minute>
+    <status>Sold</status>
+    <startDate>22/10/2023</startDate>
+    <startTime>11:13:58pm</startTime>
+    <bidderID>0</bidderID>
+  </listedItem>
+  <listedItem>
+    <customerID>2</customerID>
+    <itemID>2</itemID>
+    <itemName>Dell Laptop II</itemName>
+    <category>Laptop</category>
+    <description>Slightly used</description>
+    <startPrice>300.00</startPrice>
+    <reservePrice>350.00</reservePrice>
+    <buyItNowPrice>450.00</buyItNowPrice>
+    <bidPrice>300.00</bidPrice>
+    <day>1</day>
+    <hour>1</hour>
+    <minute>4</minute>
+    <status>In progress</status>
+    <startDate>22/10/2023</startDate>
+    <startTime>11:40:44pm</startTime>
+    <bidderID>2</bidderID>
+  </listedItem>
+  <listedItem>
+    <customerID>2</customerID>
+    <itemID>3</itemID>
+    <itemName>ASUS PowerPerform 2</itemName>
+    <category>Laptop</category>
+    <description>Charger included</description>
+    <startPrice>210.00</startPrice>
+    <reservePrice>310.00</reservePrice>
+    <buyItNowPrice>410.00</buyItNowPrice>
+    <bidPrice>210.00</bidPrice>
+    <day>0</day>
+    <hour>3</hour>
+    <minute>4</minute>
+    <status>In progress</status>
+    <startDate>22/10/2023</startDate>
+    <startTime>11:41:28pm</startTime>
+    <bidderID>2</bidderID>
+  </listedItem>
+  <listedItem>
+    <customerID>2</customerID>
+    <itemID>4</itemID>
+    <itemName>Canon D5</itemName>
+    <category>camera</category>
+    <description>With kit flash</description>
+    <startPrice>410.00</startPrice>
+    <reservePrice>450.00</reservePrice>
+    <buyItNowPrice>510.00</buyItNowPrice>
+    <bidPrice>410.00</bidPrice>
+    <day>3</day>
+    <hour>0</hour>
+    <minute>15</minute>
+    <status>In progress</status>
+    <startDate>22/10/2023</startDate>
+    <startTime>11:42:16pm</startTime>
+    <bidderID>2</bidderID>
+  </listedItem>
+  <listedItem>
+    <customerID>2</customerID>
+    <itemID>5</itemID>
+    <itemName>Nikon XR-233</itemName>
+    <category>camera</category>
+    <description>No lens cap</description>
+    <startPrice>510.00</startPrice>
+    <reservePrice>650.00</reservePrice>
+    <buyItNowPrice>710.00</buyItNowPrice>
+    <bidPrice>510.00</bidPrice>
+    <day>5</day>
+    <hour>2</hour>
+    <minute>1</minute>
+    <status>In progress</status>
+    <startDate>22/10/2023</startDate>
+    <startTime>11:42:55pm</startTime>
+    <bidderID>2</bidderID>
+  </listedItem>
+</listedItems>

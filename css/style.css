@@ -1,0 +1,544 @@
+/* Author: Levenspeil Sangalang (104328146)
+	Date: 16/10/2023
+	Styling for UI elements and tables 
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body{
+    font-family: 'Helvetica', sans-serif;
+    background-color: #FFFCF9;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 6%;
+}
+
+#full-container{
+    margin-left: 10%;
+}
+
+/* Anchor tag automatically inherits root color */
+a{
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover{
+    color: #8da63b; 
+    transition: 255ms ease;
+}
+
+p{ 
+    font-weight: 300;  
+    color: #403e56;
+}
+
+/* Heading styles */
+h1{
+    font: 2.3rem 'Gabarito', sans-serif;
+}
+
+h2{
+    font: 1.6rem 'Gabarito', sans-serif;
+}
+
+h3{
+    font: 1.3rem 'Gabarito', sans-serif;
+}
+
+h4{
+    font: 1.1rem 'Gabarito', sans-serif;
+}
+
+h5{
+    font: 0.9rem 'Gabarito', sans-serif;
+}
+
+h6{
+    font: 0.7rem 'Gabarito', sans-serif;
+} 
+
+/* Font weight styles */ 
+.regular{
+    font-weight: 400; 
+}
+ 
+.semibold, strong{
+    font-weight: 600; 
+}
+
+.extrabold{
+    font-weight: 800; 
+}
+
+/* Center alignment */
+.center{
+    text-align: center;
+}
+
+.center-element{  
+    position: relative;
+    text-align: center; 
+}
+
+/* Colors */
+.blue{
+    color: #973da3;
+}
+
+.green{
+    color: #7b9133;
+}
+
+.gold{
+    color: #bb8e08;
+}
+
+.grey{
+    color: rgb(155, 155, 155);
+}
+
+/* Line height */
+.height{
+    padding-top: 20px;
+}
+
+/* Top menu bar */
+header{
+    background-color: #FFFCF9;
+    border-bottom: 1px solid #973da3;
+    padding: 13px 7%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    display: flex;
+    transition: all .50s ease;
+}
+
+menu{
+    display: flex; 
+}
+
+menu a, .padding-spacer a{
+    font: 300 0.9rem 'Helvetica', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit; 
+    margin: 0px 30px; 
+    padding: 5px 0; 
+    float: right;
+}
+
+menu li{
+    list-style: none;
+}
+
+menu a:hover{  
+    color: #8da63b;
+    display: block;
+    transition: 275ms ease;
+}
+
+menu #select{  
+    border-bottom: 3px solid #7b9133;
+}
+
+/* Use of background image for root bg */
+:root{ 
+    color: #3B281D; 
+} 
+
+.notif{  
+    font-weight: 300;
+    background: #f5e9b6; 
+    color: #988a49; 
+    padding: 15px 0;
+    border-radius: 0 0 25px 25px;
+    text-align: center;  
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    background-position: top;
+    position: relative;
+} 
+
+.success{  
+    font: 300 1rem 'Helvetica', sans-serif;
+    line-height: 130%;
+    background: #d7f5b6; 
+    color: #559849; 
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 7px;
+    text-align: center;  
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    background-position: top;
+    position: relative;
+} 
+
+/* Landing page container with background */
+.index-container{
+    width: 100%;
+    height: 125vh;
+    clear: both;
+    float: left;
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+
+/* Form container for all forms */
+.form-cube{
+    width: 90%;
+    max-width: 500px;
+    position: relative;   
+    background: #FFFCF9;
+    border: 0.5px solid #403e56; 
+    margin: 1em auto;
+    padding: 40px 60px 75px;
+    text-align: center;  
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+}
+
+.form-pop{
+    width: 90%;
+    max-width: 500px;
+    position: fixed;  
+    background: #FFFCF9;
+    border: 0.5px solid #403e56; 
+    margin: 1em auto;
+    padding: 15px 40px 45px;
+    left: 45%;
+    top: 15%;
+    transform: translate(-40%, 5%);
+    text-align: center;  
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.3); 
+}
+
+.wide{ 
+    max-width: 800px; 
+}
+
+.tall{ 
+    min-height: 90%;
+    max-height: 220%;
+}
+
+.transform-left{
+    left: 87%; 
+    transform: translate(-40%, 5%);
+    position: relative;
+}
+
+.auction-cube{
+    width: 90%;  
+    background: #effdff;
+    border: 0.5px solid #403e56; 
+    margin: 1em auto;
+    padding: 20px 120px 40px; 
+}
+
+/* Register, login, booking containers and elements */
+.login-container{
+    width: 100%;
+    height: 100vh;
+    clear: both;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-color: #7bcfa2;
+}
+
+.signup-container{
+    width: 100%;
+    height: 100vh;
+    margin: 0; 
+    clear: both;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-color: #7bcfa2;
+}
+
+/* Input field styles, with floats */
+label{
+    font-weight: 300; 
+    color: rgb(160, 160, 160);  
+    margin: 8px 7px 0 0; 
+    vertical-align: middle;
+    float: left;
+}
+
+.input-field{
+    background: #eaeaea;
+    border: solid 0.5px #403e56;
+    margin: 2px 0 17px; 
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.input-disable{
+    pointer-events: none;
+    padding-left: 5px;
+}
+
+.short{
+    width: 35%;
+}
+
+.shorter{
+    width: 15%;
+}
+
+.inline{
+    float: left;
+    position: relative;
+}
+
+.input-field:hover{
+    background: #f9f9f9;
+    border: solid 0.5px #403e56;
+    margin: 2px 0 17px; 
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.input-field:active, .input-field:focus{
+    background: #f9f9f9;
+    border: solid 0.5px #403e56;
+    margin: 2px 0 17px; 
+    border-radius: 3px;
+    display: flex;
+    align-items: center; 
+}
+
+.input-field i{
+    margin-left: 8px;
+    color: rgb(188, 188, 188);
+}
+
+input[type=text]{ 
+    font-size: 1rem;
+    font-weight: 300; 
+    border: 0; 
+    background: transparent;
+    outline: 0;
+    padding: 7px 0px 7px 8px;
+    width: 100%;
+}   
+
+select{
+    font-size: 1rem;
+    color: rgb(107, 107, 107);
+    font-weight: 200; 
+    border: solid 0.5px #403e56;
+    border-radius: 3px; 
+    margin: 2px 0 17px;  
+    padding: 7px 0px 7px 8px;
+    margin-right: 13px;
+    width: 70%; 
+    display: flex;
+}
+
+.label-contain{
+    font-weight: 300; 
+    color: rgb(142, 142, 142);    
+    text-align: right; 
+    width: 25%;
+    display: inline-block; 
+    line-height: 30px;
+}
+
+.info-contain{    
+    font-size: 1rem;
+    font-weight: 300;   
+    width: 75%;
+    text-align: left;
+    display: inline-block; 
+    padding-left: 20px; 
+}
+
+.item-contain{    
+    font-size: 1rem;
+    font-weight: 300;   
+    width: 75%;
+    text-align: left;
+    display: inline-block; 
+    padding-left: 12px; 
+}
+
+.clear{
+    clear: both;
+}
+
+.button-contain{     
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding-top: 25px; 
+}
+
+.section-contain{      
+    width: 100%;
+    max-width: 900px;
+    position: relative;   
+    background: #FFFCF9; 
+    margin: 1em auto;
+    padding: 25px 60px 5px;
+    line-height: 25px;
+    text-align: left;   
+}
+
+.table-contain{      
+    width: 100%;
+    max-width: 1280px;
+    position: relative;   
+    background: #FFFCF9; 
+    margin: 1em auto;
+    padding: 25px 60px 5px;
+    line-height: 25px;
+    text-align: left;   
+}
+
+
+#float-left, .float-left{
+    float: left;
+}
+
+#float-right, .float-right{
+    float: right;
+} 
+
+.input-container #float-right{ 
+    float: right;
+}
+
+.input-container #input-left{
+    padding: 0 0.25em 0 0; 
+    width: 50%;
+    float: left;
+}
+
+.input-container #input-right{ 
+    padding: 0 0 0 0.25em; 
+    width: 50%;
+    float: right;
+}
+
+/* General button style with hover */
+#fill-btn, .fill-btn{
+    font: 400 1rem 'Gabarito', sans-serif;
+    color: #ffffff;
+    background-color: #8da63b;
+    text-decoration: none;
+    border: 2px solid transparent; 
+    padding: 8px 20px;
+    margin-left: 7px;
+    cursor: pointer;
+}  
+
+#fill-btn:hover, .fill-btn:hover{
+    color: #ffffff;  
+    background-color: #7b9133;
+    cursor: pointer;
+    transition: 400ms ease;
+} 
+
+.fill-btn:active{
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.2);
+}
+
+.validate-msg{   
+    font-weight: 300;     
+    position: relative;
+    text-align: left; 
+    padding: 8px 18px;
+}
+
+#red-btn, .red-btn{
+    font: 400 1rem 'Gabarito', sans-serif;
+    background-color: #FFFCF9;
+    color: #b649c5; 
+    text-decoration: none;
+    border: 1.5px solid #b649c5; 
+    padding: 8px 20px;
+    margin-left: 7px;
+    cursor: pointer;
+}  
+
+#red-fill{
+    font: 400 1rem 'Gabarito', sans-serif;
+    background-color: #b649c5;
+    color: #FFF; 
+    text-decoration: none;  
+    border: 2px solid transparent; 
+    padding: 8px 20px;
+    margin-top: 7px;
+    margin-left: 7px;
+    cursor: pointer;
+} 
+
+#red-btn:hover, .red-btn:hover{
+    color: #ffffff;  
+    background-color: #b649c5;
+    cursor: pointer;
+    transition: 400ms ease;
+}  
+
+.error-msg{   
+    background-color: #fce3ff;   
+    border: solid 1px #973da3;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.error-msg-pln{  
+    font-weight: 300;    
+    color: #973da3;
+    line-height: 80%; 
+    padding: 10px;
+}
+
+/* Table styles */  
+table, th, td{
+    text-align: center;
+    border-top: 0.5px solid #b6c3f5;
+    border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    border-bottom: 0.5px solid #b6c3f5; 
+    background-color: #FFFCF9;
+    border-collapse: collapse;
+} 
+
+th{
+    font: 200 0.75rem 'Gabarito', sans-serif;
+    color: #FFF;  
+    background: #403e56;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+/* Table cells for courses/codes */
+td{
+    font: 100 0.9rem 'Helvetica', sans-serif;
+    line-height: 19px;
+    padding: 0.5em;
+
+}
+
+td:hover{  
+    background-color: #d8d8d8; 
+    transition: 275ms ease;
+} 
+ 

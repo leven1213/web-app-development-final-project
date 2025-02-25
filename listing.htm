@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"> 
+    <!-- Viewport set to scale 1.0 -->       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descriptive meta tags -->   
+    <meta name="description" content="ShopOnline listing">
+	<meta name="keywords" content="ShopOnline, listing, items">
+	<meta name="author" content="Levenspeil Sangalang">
+    <title>ShopOnline &#8211; Listing</title>
+    <!-- References to external basic CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">  
+     <!-- References to external script file/s --> 
+    <script type="text/javascript" src="js/list-item.js"></script>
+    <!-- References to external fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;800&display=swap" rel="stylesheet"> 
+</head>
+<body>    
+    <header>
+        <h1 class="semibold blue">ShopOnline<h1>
+        <menu>  
+            <li><a href="listing.htm" id="select">Listing</a></li>
+            <li><a href="bidding.htm">Bidding</a></li>
+            <li><a href="maintenance.htm">Maintenance</a></li>
+            <li><a href="php/logout.php">Logout</a></li>
+        </menu>
+    </header>
+    <!-- Box container containing elements -->
+    <p id="welcome"></p>
+    <div class="form-cube wide tall">  
+        <br><h2 class="regular">Seller details</h2>
+        <p class="height">Create a listing by completing the form below.</p>
+        <br> 
+        <p class="error-msg-pln" id="msg"></p>
+        <div class="input-container">  
+            <form id="listingForm" method="get">
+                <!-- Field for email starts -->
+                <label class="label-contain">Item name*</label>
+                <div class="input-field">
+                    <input type="text" name="itm-name" id="itmName"> <!-- HTML validation -->
+                </div>  
+                <!-- Field for email starts -->
+                <label class="label-contain">Category*</label>
+                <select name="itm-catg" id="itmCatg" class="short" onchange="addCatg();">
+                    <option value="">Select...</option>			
+                    <option value="camera">Camera</option>
+                    <option value="phone">Phone</option>
+                    <option value="other">Other</option>
+                </select>
+                <!-- Field for email starts -->
+                <span name="other-catg" id="addCatg"></span> 
+                <!-- Field for password starts -->
+                <label class="label-contain">Description*</label>
+                <div class="input-field">
+                    <input type="text" name="itm-dsc" id="itmDsc"> <!-- HTML validation -->
+                </div>  
+                <!-- Field for password starts -->
+                <label class="label-contain">Start price*</label>
+                <div class="input-field short">
+                    <input type="text" name="start-prc" id="startPric" value="0"> <!-- HTML validation -->
+                </div> 
+                <!-- Field for password starts -->
+                <label class="label-contain">Reserve price*</label>
+                <div class="input-field short">
+                    <input type="text" name="rsv-prc" id="rsvPric"> <!-- HTML validation -->
+                </div> 
+                <!-- Field for password starts -->
+                <label class="label-contain">Buy It Now price*</label>
+                <div class="input-field short">
+                    <input type="text" name="buy-prc" id="buyPric"> <!-- HTML validation -->
+                </div> 
+                <!-- Field for email starts -->
+                <label class="label-contain">Duration*</label>
+                <select name="day-qty" id="dayQty" class="shorter inline">
+                    <option value="">Day</option>	
+                    <option value="0">0</option>		
+                    <option value="1">1</option><option value="2">2</option>
+                    <option value="3">3</option><option value="4">4</option>
+                    <option value="5">5</option><option value="6">6</option>
+                    <option value="7">7</option> 
+                </select>
+                <select name="hr-qty" id="hrQty" class="shorter inline">
+                    <option value="">Hour</option>	
+                    <option value="0">0</option>		
+                    <option value="1">1</option><option value="2">2</option>
+                    <option value="3">3</option><option value="4">4</option>
+                    <option value="5">5</option><option value="6">6</option>
+                    <option value="7">7</option><option value="8">8</option>
+                    <option value="9">9</option><option value="10">10</option>
+                    <option value="11">11</option><option value="12">12</option>
+                    <option value="13">13</option><option value="14">14</option> 
+                    <option value="15">15</option><option value="16">16</option>
+                    <option value="17">17</option><option value="18">18</option>
+                    <option value="19">19</option><option value="20">20</option>
+                    <option value="21">21</option><option value="22">22</option>
+                    <option value="23">23</option><option value="24">24</option>  
+                </select>
+                <select name="min-qty" id="minQty" class="shorter inline">
+                    <option value="">Min</option>			
+                    <option value="1">1</option><option value="2">2</option>
+                    <option value="3">3</option><option value="4">4</option>
+                    <option value="5">5</option><option value="6">6</option>
+                    <option value="7">7</option><option value="8">8</option>
+                    <option value="9">9</option><option value="10">10</option>
+                    <option value="11">11</option><option value="12">12</option>
+                    <option value="13">13</option><option value="14">14</option> 
+                    <option value="15">15</option><option value="16">16</option>
+                    <option value="17">17</option><option value="18">18</option>
+                    <option value="19">19</option><option value="20">20</option>
+                    <option value="21">21</option><option value="22">22</option>
+                    <option value="23">23</option><option value="24">24</option>  
+                    <option value="25">25</option><option value="26">26</option>
+                    <option value="27">27</option><option value="28">28</option>
+                    <option value="29">29</option><option value="30">30</option>
+                    <option value="31">31</option><option value="32">32</option>
+                    <option value="33">33</option><option value="34">34</option>
+                    <option value="35">35</option><option value="36">36</option>
+                    <option value="37">37</option><option value="38">38</option>
+                    <option value="39">39</option><option value="40">40</option>
+                    <option value="41">41</option><option value="42">42</option>
+                    <option value="43">43</option><option value="44">44</option> 
+                    <option value="45">45</option><option value="46">46</option>
+                    <option value="47">47</option><option value="48">48</option>
+                    <option value="49">49</option><option value="50">50</option>
+                    <option value="51">51</option><option value="52">52</option>
+                    <option value="53">53</option><option value="54">54</option>  
+                    <option value="55">55</option><option value="56">56</option>
+                    <option value="57">57</option><option value="58">58</option>
+                    <option value="59">59</option><option value="60">60</option> 
+                </select>
+            </form>
+            <!-- Register button -->  
+            <div class="button-contain"> 
+                <button id="red-btn" onclick="clearForm();">Reset</button> 
+                <button id="fill-btn" onclick="listGet();">Listing</button>  
+            </div>
+        </div> 
+    </div> 
+</body>
+</html>

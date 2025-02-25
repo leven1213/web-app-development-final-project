@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"> 
+    <!-- Viewport set to scale 1.0 -->       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descriptive meta tags -->   
+    <meta name="description" content="ShopOnline bidding">
+	<meta name="keywords" content="ShopOnline, bidding, auction">
+	<meta name="author" content="Levenspeil Sangalang"> 
+    <title>ShopOnline &#8211; Bidding</title>
+    <!-- References to external basic CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">  
+    <!-- References to external script file/s --> 
+    <script type="text/javascript" src="js/bid-item.js"></script>
+    <!-- References to external fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;800&display=swap" rel="stylesheet"> 
+</head>
+<body>    
+    <header>
+        <h1 class="semibold blue">ShopOnline<h1>
+        <menu>  
+            <li><a href="listing.htm">Listing</a></li>
+            <li><a href="bidding.htm" id="select">Bidding</a></li>
+            <li><a href="maintenance.htm">Maintenance</a></li>
+            <li><a href="php/logout.php">Logout</a></li>
+        </menu>
+    </header>
+    <!-- General container containing elements --> 
+    <div class="section-contain">
+        <br><h2 class="regular">Auction Items</h2>
+        <p class="height">Current auction items are listed below. To place a bid for an item,
+            use the 'Place Bid' button. <br/><strong class="blue">NOTE:</strong> Item remaining time and bid prices are updated
+            every 15 seconds.
+        </p>
+    </div>
+    <span id="bidsArea"></span> 
+    <span id="popup"></span>
+    <p class="validate-msg" id="msg"></p>
+</body>
+</html>
